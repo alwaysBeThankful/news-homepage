@@ -7,7 +7,7 @@
   --Off-white: hsl(36, 100%, 99%);
   --Grayish-blue: hsl(233, 8%, 79%);
   --Dark-grayish-blue: hsl(236, 13%, 42%);
-  --Very-dark-blue: hsl(240, 100%, 5%);
+  --Very-dark-blue: hsl(240, 100%, 5%, 0.3);
 }
 
 /* ======
@@ -81,6 +81,14 @@ ul li {
   text-decoration: none;
 }
 
+body {
+  transition: 0.4s;
+}
+
+body.show {
+  background: var(--Very-dark-blue);
+}
+
 /* == HEADER == */
 
 /* Navagation */
@@ -106,10 +114,6 @@ ul li {
   position: absolute;
   top: 3.6%;
   left: 75%;
-}
-
-.hamburger-img-inactive.show {
-  transition: transform 1000ms;
 }
 
 .hamburger-ul {

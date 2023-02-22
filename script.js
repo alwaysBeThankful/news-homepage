@@ -1,15 +1,17 @@
 const active = document.querySelector(".hamburger-img-active");
 const inactive = document.querySelector(".hamburger-img-inactive");
 const menu = document.querySelector(".hamburger-ul");
+const main = document.querySelector("body");
 
-const x = () => {
-  active.addEventListener("click", () => {
-    menu.classList.add("show");
-  });
+active.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
-  inactive.addEventListener("click", () => {
-    menu.classList.remove("show");
-  });
-};
+inactive.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
-x();
+main.addEventListener("click", (event) => {
+  const current = event.currentTarget;
+  current.classList.toggle("show");
+});
