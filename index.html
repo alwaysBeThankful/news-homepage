@@ -23,15 +23,27 @@
       <div class="nav-wrapper">
         <!-- Navagation -->
         <nav>
-          <img src="./assets/images/logo.svg" alt="Company logo" />
-          <img src="./assets/images/icon-menu.svg" alt="#" />
+          <img class="logo" src="./assets/images/logo.svg" alt="Company logo" />
+          <div class="hamburger-img">
+            <img
+              class="hamburger-img-active"
+              src="./assets/images/icon-menu.svg"
+              alt="#"
+            />
+          </div>
         </nav>
       </div>
 
-      <!-- Hamburger menu -->
       <div class="hamburger-wrapper">
-        <nav class="hamburger-nav" aria-label="Mobile links">
-          <ul>
+        <!-- Hamburger menu -->
+        
+          <ul class="hamburger-ul">
+            <nav aria-label="Mobile links">
+              <img
+                class="hamburger-img-inactive"
+                src="./assets/images/icon-menu-close.svg"
+                alt=""
+              />
             <li><a href="#">Home</a></li>
             <li><a href="#">New</a></li>
             <li><a href="#">Popular</a></li>
@@ -112,5 +124,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

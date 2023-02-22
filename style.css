@@ -14,49 +14,28 @@
 CSS RESET
 CREDIT TO: https://www.joshwcomeau.com/css/custom-css-reset/ 
 ====== */
-
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
 * {
+  padding: 0;
   margin: 0;
 }
 
-/*
-  3. Allow percentage-based heights in the application
-*/
 html,
 body {
   height: 100%;
 }
 
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Inter", sans-serif;
 }
 
-p {
-  font-size: 15px;
-}
-
-/*
-  6. Improve media defaults
-*/
 img,
 picture,
 video,
@@ -66,9 +45,6 @@ svg {
   max-width: 100%;
 }
 
-/*
-  7. Remove built-in form typography styles
-*/
 input,
 button,
 textarea,
@@ -76,9 +52,6 @@ select {
   font: inherit;
 }
 
-/*
-  8. Avoid text overflows
-*/
 p,
 h1,
 h2,
@@ -89,12 +62,80 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/*
-  9. Create a root stacking context
-*/
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* == UTILITES == */
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* == HEADER == */
+
+/* Navagation */
+.nav-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.8rem 1.2rem;
+}
+
+.nav-wrapper nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+
+.logo {
+  max-width: 15%;
+}
+
+/* Hamburger */
+.hamburger-img-inactive {
+  position: absolute;
+  top: 3.6%;
+  left: 75%;
+}
+
+.hamburger-img-inactive.show {
+  transition: transform 1000ms;
+}
+
+.hamburger-ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 31%;
+  height: 100%;
+  padding: 8.5rem 1.5rem;
+  line-height: 2.8;
+  font-size: 1.2rem;
+  transform: translateX(100%);
+  transition: 0.4s;
+}
+
+.hamburger-ul.show {
+  transform: translateX(0%);
+  background-color: blanchedalmond;
+}
+
+/* == MAIN == */
+.hero-wrapper img {
+  padding: 0.5rem 1.2rem;
 }
 
 /* -- Attribution --*/
